@@ -23,6 +23,14 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Alamofire'
+  s.dependency 'Alamofire'# API请求
+  s.dependency 'SRLogKit'
+  s.dependency 'SRUtil'
+
+  # Tests subspec
+  s.test_spec 'Tests' do |ts|
+    ts.source_files = ['Tests/**/*','SRNetworkKit/Classes/**/*']
+    ts.dependency 'SRLogKit'
+  end
   
 end
